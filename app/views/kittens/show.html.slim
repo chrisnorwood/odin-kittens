@@ -1,0 +1,12 @@
+h1 View Kitten
+h2 = @kitten.name
+h3 Age:
+= @kitten.age
+h3 Cuteness:
+= @kitten.cuteness
+h3 Softness:
+= @kitten.softness
+br
+= link_to 'Edit', edit_kitten_path(@kitten)
+br
+= link_to 'Delete', @kitten, method: :destroy

@@ -1,0 +1,19 @@
+h1 Kittens live here
+table
+  thead
+    tr
+      th Name
+      th Age
+      th Cuteness
+      th Softness
+      th
+  tbody
+    - @kittens.each do |kitten|
+      tr
+        td = link_to kitten.name, kitten
+        td = kitten.age
+        td = kitten.cuteness
+        td = kitten.softness
+        td = link_to "Delete", kitten, method: :delete
+br
+= link_to "New Kitten", new_kitten_url
